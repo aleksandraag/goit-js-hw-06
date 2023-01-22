@@ -1,15 +1,10 @@
-const test = document.querySelectorAll("li")
-console.log(test);
+"use strict";
 
+const categories = document.querySelector("#categories").children;
 
-const body = document.body;
-console.log(body);
+console.log(`Number of categories: ${categories.length}`);
 
-const list = body.firstElementChild;
-console.log(list);
-
-const firstListItem = list.firstElementChild;
-console.log(firstListItem);
-
-const listItems = list.children;
-console.log(listItems);
+for (const category of categories) {
+  console.log(`Category: ${category.firstElementChild.innerHTML}`);
+  console.log(`Elements: ${category.lastElementChild.children.length}`);
+}
